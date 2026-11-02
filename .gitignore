@@ -1,0 +1,10 @@
+# large generated data: regenerate with src/generate_dataset.py
+data/churn_panel*.csv.gz
+data/churn_panel_part*
+parts/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
