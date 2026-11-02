@@ -1,0 +1,111 @@
+column,family,description,real_world_source
+customer_id,Key / time,Pseudonymised customer key,Data warehouse
+month_idx,Key / time,Month index 0..23 (0 = Oct 2024),Data warehouse
+month,Key / time,Calendar month YYYY-MM,Data warehouse
+suggested_split,Key / time,"Leakage-safe time split: train m0-14, valid m15-17, test m18-20; m21-23 have no complete 3m label",Data warehouse
+age_band,Customer context,Age band,Core banking / KYC
+segment,Customer context,Commercial segment,Core banking / KYC
+location,Customer context,Primary city/region,Core banking / KYC
+occupation_industry,Customer context,Occupation / industry (KYC),Core banking / KYC
+salary_status,Customer context,Salary status: domiciled / not domiciled / self-employed / etc.,Core banking / KYC
+is_sme_or_corporate,Customer context,1 if SME or Corporate,Core banking / KYC
+tenure_months,Customer context,Months since account opening at this month,Core banking / KYC
+open_banking_consent,External / ecosystem,1 if customer consented to data sharing,Open banking / account aggregation (consented)
+declared_primary_bank,Experience,Self-declared 'is this your primary bank' (~20% answered),Customer survey platform
+txn_count,Transaction,Debit transactions in month,Payments switch / core banking txn logs
+txn_value_total,Transaction,"Total debit value, NGN",Payments switch / core banking txn logs
+txn_value_avg,Transaction,"Average transaction value, NGN",Payments switch / core banking txn logs
+txn_active_days,Transaction,Days with at least one transaction,Payments switch / core banking txn logs
+txn_freq_per_active_day,Transaction,Transactions per active day,Payments switch / core banking txn logs
+transfer_share,Transaction,Share of txns that are transfers,Payments switch / core banking txn logs
+pos_card_share,Transaction,Share that are POS/card,Payments switch / core banking txn logs
+bills_airtime_share,Transaction,Share that are bills/airtime/data,Payments switch / core banking txn logs
+cash_wd_share,Transaction,Share that are cash withdrawals,Payments switch / core banking txn logs
+latency_median_ms,Speed,"Median request-to-response latency, ms",Payments switch / core banking txn logs
+latency_p95_ms,Speed,"95th percentile latency, ms",Payments switch / core banking txn logs
+time_to_credit_sec_avg,Speed,"Average time for beneficiary credit, seconds",Payments switch / core banking txn logs
+pct_txn_slower_than_10s,Speed,Share of txns taking more than 10 s,Payments switch / core banking txn logs
+otp_delay_sec_avg,Speed,"Average OTP delivery delay, seconds",Payments switch / core banking txn logs
+failed_txn_count,Reliability,Failed transactions (VOLUME-CONFOUNDED: heavy users fail more often),Payments switch / core banking txn logs
+failure_rate,Reliability,failed / total txns,Payments switch / core banking txn logs
+reversal_count,Reliability,Auto-reversed transactions,Payments switch / core banking txn logs
+timeout_count,Reliability,Timeouts,Payments switch / core banking txn logs
+retry_count,Reliability,Retries after a failure (frustration signal),Payments switch / core banking txn logs
+debit_no_value_count,Reliability,Debit-without-value cases,Payments switch / core banking txn logs
+otp_failure_count,Reliability,OTP failures,Payments switch / core banking txn logs
+failed_logins,Reliability,Failed app logins,Payments switch / core banking txn logs
+app_crash_count,Reliability,App crashes,Payments switch / core banking txn logs
+session_abandon_rate,Reliability,Share of app sessions abandoned,Payments switch / core banking txn logs
+outage_minutes_exposed,Reliability,Outage minutes the customer was exposed to (channel-share and location weighted),Payments switch / core banking txn logs
+n_outage_incidents_exposed,Reliability,Incidents touching the customer's channels and location,Payments switch / core banking txn logs
+app_logins,Digital engagement,App logins,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+app_sessions,Digital engagement,App sessions,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+ussd_sessions,Digital engagement,USSD sessions,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+web_logins,Digital engagement,Web logins,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+avg_session_duration_sec,Digital engagement,"Average app session length, s",Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+days_since_last_login,Digital engagement,Days since last app login at month end,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+app_share,Digital engagement,Share of txns via app,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+ussd_share,Digital engagement,Share via USSD,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+card_share,Digital engagement,Share via card/POS,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+web_share,Digital engagement,Share via web,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+branch_atm_share,Digital engagement,Share via branch/ATM,Mobile & web app telemetry (Firebase/Crashlytics/analytics)
+avg_balance,Financial behaviour,"Average daily balance, NGN",Core banking system
+end_balance,Financial behaviour,"Month-end balance, NGN",Core banking system
+balance_change_pct,Financial behaviour,End balance vs prior month (NaN in first month),Core banking system
+inflow_total,Financial behaviour,"Total credits, NGN",Core banking system
+outflow_total,Financial behaviour,"Total debits, NGN",Core banking system
+turnover_ratio,Financial behaviour,(inflow+outflow) / (2 x avg balance),Core banking system
+salary_inflow_flag,Financial behaviour,1 if a domiciled salary credit arrived,Core banking system
+salary_amount,Financial behaviour,"Salary credit amount, NGN",Core banking system
+large_outflow_flag,Financial behaviour,1 if a sweep-out above 30% of average balance occurred,Core banking system
+fintech_outflow_amount,Financial behaviour,"Debits to identified fintech counterparties, NGN (counterparty bank/fintech codes in switch logs)",Core banking system
+fintech_outflow_share,Financial behaviour,fintech_outflow_amount / outflow_total,Core banking system
+fintech_outflow_count,Financial behaviour,Number of transfers to fintech counterparties,Core banking system
+third_party_wallet_spend_share,External / ecosystem,Share of spend via third-party wallets/QR,Payment ecosystem & merchant/processor data
+merchant_settlement_share_other_psp,External / ecosystem,SME only: share of merchant settlements routed to another processor (NaN otherwise),Payment ecosystem & merchant/processor data
+external_fintech_balance,External / ecosystem,"Balance at external fintech (consenting customers only, else NaN)",Open banking / account aggregation (consented)
+external_inflow,External / ecosystem,"Inflow to external accounts (consenting customers only, else NaN)",Open banking / account aggregation (consented)
+n_products,Relationship,Number of products held,Core banking system
+has_savings,Relationship,Savings product,Core banking system
+has_current,Relationship,Current account,Core banking system
+has_debit_card,Relationship,Debit card,Core banking system
+has_credit_card,Relationship,Credit card,Core banking system
+has_loan,Relationship,Active loan,Core banking system
+has_overdraft,Relationship,Overdraft,Core banking system
+has_fx_account,Relationship,FX account,Core banking system
+has_investment,Relationship,Investment product,Core banking system
+bureau_n_other_bank_accounts,External / ecosystem,Accounts at other institutions (quarterly refresh),Credit bureau
+bureau_active_lenders,External / ecosystem,Active lenders (quarterly refresh),Credit bureau
+bureau_score,External / ecosystem,Bureau score 300-850 (NaN for thin files),Credit bureau
+complaints_count,Experience,Complaints logged,CRM / call-centre / complaints system
+support_contacts,Experience,All support contacts,CRM / call-centre / complaints system
+complaint_resolution_hours_avg,Experience,"Mean resolution time, hours (NaN if no complaint)",CRM / call-centre / complaints system
+unresolved_complaints,Experience,Complaints unresolved at month end,CRM / call-centre / complaints system
+csat_score,Experience,"CSAT 1-5, sparse (~4% respond)",Customer survey platform
+nps_score,Experience,"NPS 0-10, sparse (~3% respond)",Customer survey platform
+fee_total,Cost,"Fees paid, NGN",Core banking system
+fee_per_txn_avg,Cost,"Average fee per transaction, NGN",Core banking system
+own_bank_success_rate_pct,Market / benchmark,"Own-bank success rate that month, %","Market benchmark (status pages, interbank switch reports)"
+own_bank_median_latency_ms,Market / benchmark,"Own-bank median latency, ms","Market benchmark (status pages, interbank switch reports)"
+fintech_success_rate_pct,Market / benchmark,"Benchmark fintech success rate, %","Market benchmark (status pages, interbank switch reports)"
+fintech_median_latency_ms,Market / benchmark,"Benchmark fintech median latency, ms","Market benchmark (status pages, interbank switch reports)"
+speed_gap_ms,Market / benchmark,Own minus fintech median latency,"Market benchmark (status pages, interbank switch reports)"
+fintech_promo_intensity,Market / benchmark,Fintech promo intensity 0-1 (campaign tracking),"Market benchmark (status pages, interbank switch reports)"
+fee_change_flag,Market / benchmark,1 in months the bank changed fees,"Market benchmark (status pages, interbank switch reports)"
+n_major_outages_in_month,Market / benchmark,Severity 3-4 incidents in month,"Market benchmark (status pages, interbank switch reports)"
+peer_fintech_adoption_rate_location,Market / benchmark,Share of customers in same location with a fintech account (peer influence),"Market benchmark (status pages, interbank switch reports)"
+txn_count_roll3,Rolling feature,Mean of txn_count over current + previous 2 months (backward-looking only),Derived
+txn_count_trend3,Rolling feature,"txn_count vs mean of previous 3 months, as a ratio minus 1",Derived
+failure_rate_roll3,Rolling feature,Mean of failure_rate over current + previous 2 months (backward-looking only),Derived
+latency_p95_roll3,Rolling feature,Mean of latency_p95_ms over current + previous 2 months (backward-looking only),Derived
+app_logins_roll3,Rolling feature,Mean of app_logins over current + previous 2 months (backward-looking only),Derived
+app_logins_trend3,Rolling feature,"app_logins vs mean of previous 3 months, as a ratio minus 1",Derived
+avg_balance_roll3,Rolling feature,Mean of avg_balance over current + previous 2 months (backward-looking only),Derived
+avg_balance_trend3,Rolling feature,"avg_balance vs mean of previous 3 months, as a ratio minus 1",Derived
+fintech_outflow_share_roll3,Rolling feature,Mean of fintech_outflow_share over current + previous 2 months (backward-looking only),Derived
+fintech_outflow_share_chg3,Rolling feature,fintech_outflow_share minus its mean over previous 3 months,Derived
+outage_minutes_roll3,Rolling feature,Mean of outage_minutes_exposed over current + previous 2 months (backward-looking only),Derived
+complaints_roll3,Rolling feature,Mean of complaints_count over current + previous 2 months (backward-looking only),Derived
+churn_next_1m,LABEL,1 if the customer migrated in months t+1..t+1; NaN if the window is not fully observable (right-censored),Derived label
+churn_next_3m,LABEL,1 if the customer migrated in months t+1..t+3; NaN if the window is not fully observable (right-censored),Derived label
+churn_next_6m,LABEL,1 if the customer migrated in months t+1..t+6; NaN if the window is not fully observable (right-censored),Derived label

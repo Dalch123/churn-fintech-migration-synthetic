@@ -1,0 +1,43 @@
+incident_id,start_ts,end_ts,month_idx,month,channel,scope,affected_locations,duration_min,severity
+INC0031,2024-10-16 15:12:00,2024-10-16 17:32:20.396597803,0,2024-10,ussd,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,140.3,3
+INC0040,2024-11-19 11:10:00,2024-11-19 11:34:40.977049200,1,2024-11,web,regional,Lagos|Other,24.7,1
+INC0016,2024-12-24 09:01:00,2024-12-24 09:52:26.966338727,2,2024-12,app,regional,Kano,51.4,2
+INC0002,2025-01-03 05:46:00,2025-01-03 07:08:52.951333405,3,2025-01,card,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,82.9,2
+INC0023,2025-02-09 17:23:00,2025-02-09 22:55:21.579466311,4,2025-02,app,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,332.4,3
+INC0039,2025-03-04 14:53:00,2025-03-04 16:08:28.899063021,5,2025-03,card,regional,Abuja,75.5,2
+INC0008,2025-03-24 10:20:00,2025-03-24 11:39:03.638907998,5,2025-03,core,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,79.1,2
+INC0006,2025-03-24 18:46:00,2025-03-24 22:43:31.463913868,5,2025-03,card,regional,Lagos|Port Harcourt,237.5,3
+INC0029,2025-04-10 18:54:00,2025-04-10 20:41:48.152517943,6,2025-04,core,regional,Abuja|Port Harcourt|Ibadan,107.8,2
+INC0028,2025-04-12 10:04:00,2025-04-12 11:30:03.749422127,6,2025-04,app,regional,Abuja|Port Harcourt|Enugu,86.1,2
+INC0013,2025-04-22 20:10:00,2025-04-22 21:57:23.259754010,6,2025-04,app,regional,Lagos,107.4,2
+INC0017,2025-05-04 23:47:00,2025-05-05 04:56:29.196451403,7,2025-05,card,regional,Lagos,309.5,3
+INC0011,2025-05-10 09:32:00,2025-05-10 10:20:40.444990427,7,2025-05,ussd,regional,Abuja,48.7,2
+INC0001,2025-05-11 15:48:00,2025-05-11 16:14:05.138231493,7,2025-05,web,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,26.1,1
+INC0012,2025-05-17 03:20:00,2025-05-17 04:19:08.173634621,7,2025-05,core,regional,Lagos|Abuja|Port Harcourt,59.1,2
+INC0018,2025-06-15 08:26:00,2025-06-15 10:04:06.251646772,8,2025-06,core,regional,Enugu|Other,98.1,2
+INC0010,2025-06-21 07:22:00,2025-06-21 07:54:26.089686849,8,2025-06,app,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,32.4,2
+INC0041,2025-07-05 12:24:00,2025-07-05 14:18:41.108080160,9,2025-07,app,regional,Lagos|Port Harcourt,114.7,2
+INC0024,2025-08-01 03:32:00,2025-08-01 03:50:42.378399887,10,2025-08,core,regional,Abuja|Kano|Other,18.7,1
+INC0030,2025-08-22 20:59:00,2025-08-23 01:04:45.040361677,10,2025-08,app,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,245.8,3
+INC0019,2025-09-07 20:50:00,2025-09-07 21:11:48.449362035,11,2025-09,app,regional,Lagos|Port Harcourt,21.8,1
+INC0033,2025-10-02 10:57:00,2025-10-02 12:34:18.320934741,12,2025-10,core,regional,Lagos|Port Harcourt|Other,97.3,2
+INC0027,2025-10-11 01:04:00,2025-10-11 02:22:44.056254151,12,2025-10,ussd,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,78.7,2
+INC0035,2025-10-15 17:59:00,2025-10-15 19:21:39.186566166,12,2025-10,core,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,82.7,2
+INC0032,2025-10-25 07:15:00,2025-10-25 13:44:21.537678203,12,2025-10,ussd,regional,Lagos|Other,389.4,4
+INC0015,2025-11-06 10:28:00,2025-11-06 11:13:04.398273236,13,2025-11,card,regional,Lagos|Enugu|Other,45.1,2
+INC0026,2025-12-08 10:14:00,2025-12-08 10:35:31.704446301,14,2025-12,ussd,regional,Lagos|Abuja|Other,21.5,1
+INC0025,2025-12-12 08:41:00,2025-12-12 12:21:22.282344311,14,2025-12,app,regional,Enugu|Other,220.4,3
+INC0014,2025-12-17 18:45:00,2025-12-17 20:13:41.928357549,14,2025-12,web,regional,Lagos|Port Harcourt,88.7,2
+INC0036,2025-12-17 22:50:00,2025-12-18 00:38:25.522919739,14,2025-12,card,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,108.4,2
+INC0020,2026-01-20 23:02:00,2026-01-21 01:12:19.479524215,15,2026-01,app,regional,Lagos,130.3,3
+INC0009,2026-03-16 22:32:00,2026-03-16 23:51:16.118578124,17,2026-03,card,regional,Lagos|Port Harcourt|Other,79.3,2
+INC0005,2026-04-15 20:21:00,2026-04-15 22:19:24.466275602,18,2026-04,app,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,118.4,2
+INC0034,2026-05-08 09:19:00,2026-05-08 09:48:12.850043403,19,2026-05,card,regional,Lagos,29.2,1
+INC0021,2026-05-11 05:26:00,2026-05-11 12:55:51.085637380,19,2026-05,core,regional,Ibadan|Kano,449.9,4
+INC0042,2026-06-10 13:47:00,2026-06-10 14:20:47.281904261,20,2026-06,ussd,regional,Lagos,33.8,2
+INC0007,2026-08-04 00:32:00,2026-08-04 02:57:06.986216714,22,2026-08,ussd,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,145.1,3
+INC0004,2026-08-09 05:59:00,2026-08-09 06:42:29.100308866,22,2026-08,card,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,43.5,2
+INC0038,2026-08-14 08:38:00,2026-08-14 09:53:48.807917196,22,2026-08,ussd,regional,Lagos|Port Harcourt,75.8,2
+INC0022,2026-08-20 20:18:00,2026-08-20 20:53:41.602821286,22,2026-08,app,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,35.7,2
+INC0037,2026-09-03 23:46:00,2026-09-04 00:21:49.671646973,23,2026-09,ussd,nationwide,Lagos|Abuja|Port Harcourt|Ibadan|Kano|Enugu|Kaduna|Other,35.8,2
+INC0003,2026-09-18 08:22:00,2026-09-18 08:53:59.372701501,23,2026-09,ussd,regional,Lagos|Port Harcourt,32.0,2

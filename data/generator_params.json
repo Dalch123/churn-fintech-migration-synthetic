@@ -1,0 +1,28 @@
+{
+  "seed": 2026,
+  "n_customers": 60000,
+  "n_months": 24,
+  "target_cumulative_churn": 0.14,
+  "calibrated_intercept": -6.484410025123907,
+  "hazard_coefficients": {
+    "speed_fail": 0.6,
+    "speed_latency": 0.2,
+    "fee_level": 0.3,
+    "fee_shock": 0.5,
+    "has_fintech": 0.85,
+    "digital": 0.3,
+    "promo": 0.35,
+    "complaints_3m": 0.25,
+    "tenure_per_month": -0.01,
+    "extra_product": -0.25,
+    "loan": -0.6,
+    "overdraft": -0.3,
+    "salary_domiciled": -0.5,
+    "primary_bank": -0.6,
+    "other_bank_account": 0.15,
+    "peer_adoption": 1.0,
+    "january": 0.2,
+    "frailty_sd": 0.6
+  },
+  "note": "speed effect on logit = speed_fail*speed_sensitivity*zFail + speed_latency*speed_sensitivity*zLatency"
+}
